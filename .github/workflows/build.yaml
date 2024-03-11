@@ -17,9 +17,19 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - name: dir
+        run: |
+          pwd
+          ls
+
       - uses: actions/checkout@v3
         with:
           repository: "chobits/ngx_http_proxy_connect_module"
+      - name: dir
+        run: |
+          pwd
+          ls
+
       - name: build
         run: ./build.sh
 #      - name: Run a multi-line script
